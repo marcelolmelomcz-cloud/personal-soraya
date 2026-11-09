@@ -11,8 +11,108 @@
   "days": [
     {
       "name": "Segunda",
-      "focus": "Peito + Bíceps + Quadríceps + Cardio",
-      "exercises": []
+      "focus": "Costas + Tríceps + Abdômen + Cardio",
+      "exercises": [
+        {
+          "id": "Se1",
+          "name": "Puxador articulado pegada supinada",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 25,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "capturas enviadas pelo usuário — segunda-feira",
+          "group": "A1"
+        },
+        {
+          "id": "Se2",
+          "name": "Tríceps na Polia com Corda",
+          "sets": 3,
+          "reps": "15",
+          "load_kg": 15,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "capturas enviadas pelo usuário — segunda-feira",
+          "group": "A1"
+        },
+        {
+          "id": "Se3",
+          "name": "Puxada Articulada de ação conjunta",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 44,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "capturas enviadas pelo usuário — segunda-feira",
+          "group": "A2"
+        },
+        {
+          "id": "Se4",
+          "name": "Remada Baixa Supinada",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 16,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "capturas enviadas pelo usuário — segunda-feira",
+          "group": "A2"
+        },
+        {
+          "id": "Se5",
+          "name": "Remada máquina pegada Neutra",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 16,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "capturas enviadas pelo usuário — segunda-feira",
+          "group": "A3"
+        },
+        {
+          "id": "Se6",
+          "name": "Tríceps scooth pegada neutra",
+          "sets": 3,
+          "reps": "15",
+          "load_kg": 14,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "capturas enviadas pelo usuário — segunda-feira",
+          "group": "A3"
+        },
+        {
+          "id": "Se7",
+          "name": "Abdominal Máquina",
+          "sets": 3,
+          "reps": "15",
+          "load_kg": 10,
+          "rest_seconds": 30,
+          "notes": "",
+          "source": "capturas enviadas pelo usuário — segunda-feira",
+          "group": ""
+        },
+        {
+          "id": "Se8",
+          "name": "Abdominal Prancha Isométrica",
+          "sets": 3,
+          "reps": "30 segundos",
+          "load_kg": 0,
+          "rest_seconds": 30,
+          "notes": "",
+          "source": "capturas enviadas pelo usuário — segunda-feira",
+          "group": ""
+        },
+        {
+          "id": "Se9",
+          "name": "Esteira Caminhada",
+          "sets": 1,
+          "reps": "30 minutos",
+          "load_kg": null,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "capturas enviadas pelo usuário — segunda-feira",
+          "group": ""
+        }
+      ]
     },
     {
       "name": "Terça",
