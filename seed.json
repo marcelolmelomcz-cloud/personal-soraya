@@ -1,0 +1,582 @@
+{
+  "schema_version": 2,
+  "program": {
+    "name": "Projeto Soraya Melo 2026.1",
+    "goal": "Redução de gordura e hipertrofia",
+    "level": "Avançado",
+    "period_start": "2026-09-27",
+    "period_end": "2026-11-06",
+    "status": "Referência histórica — confirmar vigência"
+  },
+  "days": [
+    {
+      "name": "Segunda",
+      "focus": "Peito + Bíceps + Quadríceps + Cardio",
+      "exercises": []
+    },
+    {
+      "name": "Terça",
+      "focus": "Escada + Costas + Tríceps + Abdômen + Cardio",
+      "exercises": [
+        {
+          "id": "Te1",
+          "name": "Escada Máquina",
+          "sets": 1,
+          "reps": "10 min",
+          "load_kg": null,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Te2",
+          "name": "Puxador articulado pegada supinada",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 20,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Te3",
+          "name": "Tríceps na Polia com Corda",
+          "sets": 3,
+          "reps": "15",
+          "load_kg": 15,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Te4",
+          "name": "Puxada Articulada de ação conjunta",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 44,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Te5",
+          "name": "Remada Baixa Supinada",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 16,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Te6",
+          "name": "Remada máquina pegada Neutra",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 16,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Te7",
+          "name": "Tríceps scooth pegada neutra",
+          "sets": 3,
+          "reps": "15",
+          "load_kg": 14,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Te8",
+          "name": "Abdominal Máquina",
+          "sets": 3,
+          "reps": "15",
+          "load_kg": 10,
+          "rest_seconds": 30,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Te9",
+          "name": "Abdominal Prancha Isométrica",
+          "sets": 3,
+          "reps": "30 s",
+          "load_kg": 0,
+          "rest_seconds": 30,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Te10",
+          "name": "Esteira Caminhada",
+          "sets": 1,
+          "reps": "30 min",
+          "load_kg": null,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "name": "Quarta",
+      "focus": "Glúteos + Ombro + Cardio",
+      "exercises": [
+        {
+          "id": "Qu1",
+          "name": "Glúteos Coice na Polia Pernas Estendidas",
+          "sets": 4,
+          "reps": "15",
+          "load_kg": 15,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Qu2",
+          "name": "Agachamento Búlgaro máquina",
+          "sets": 4,
+          "reps": "10 a 12",
+          "load_kg": 0,
+          "rest_seconds": 60,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Qu3",
+          "name": "Elevação de Quadril na Máquina",
+          "sets": 4,
+          "reps": "10 a 12",
+          "load_kg": 0,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Qu4",
+          "name": "Abdutora/Agachamento",
+          "sets": 4,
+          "reps": "15",
+          "load_kg": 20,
+          "rest_seconds": 60,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Qu5",
+          "name": "Stiff pés afastados com Barra Livre",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 3,
+          "rest_seconds": 60,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Qu6",
+          "name": "Desenvolvimento em Pé com Halteres",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 2,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Qu7",
+          "name": "Elevação lateral máquina/anilhas",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 2,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Qu8",
+          "name": "Elevação Frontal na Polia Baixa (Pegada Pronada)",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 0,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Qu9",
+          "name": "Remada Alta na Polia Baixa com Barra Reta",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 15,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Qu10",
+          "name": "Elevação Lateral com Halteres",
+          "sets": 3,
+          "reps": "10",
+          "load_kg": 3,
+          "rest_seconds": 60,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Qu11",
+          "name": "Esteira Sprint",
+          "sets": 1,
+          "reps": "5 min trote + 5 min caminhada + 5 min corrida + 2 min caminhada",
+          "load_kg": null,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "name": "Quinta",
+      "focus": "Escada + Costas + Tríceps + Abdômen + Cardio",
+      "exercises": [
+        {
+          "id": "Qu1",
+          "name": "Escada Máquina",
+          "sets": 1,
+          "reps": "10 min",
+          "load_kg": null,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Qu2",
+          "name": "Puxador articulado pegada supinada",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 20,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Qu3",
+          "name": "Tríceps na Polia com Corda",
+          "sets": 3,
+          "reps": "15",
+          "load_kg": 15,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Qu4",
+          "name": "Puxada Articulada de ação conjunta",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 44,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Qu5",
+          "name": "Remada Baixa Supinada",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 16,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Qu6",
+          "name": "Abdominal Máquina",
+          "sets": 3,
+          "reps": "15",
+          "load_kg": 10,
+          "rest_seconds": 30,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Qu7",
+          "name": "Prancha Dinâmica",
+          "sets": 3,
+          "reps": "30 s",
+          "load_kg": 0,
+          "rest_seconds": 30,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        },
+        {
+          "id": "Qu8",
+          "name": "Esteira Caminhada",
+          "sets": 1,
+          "reps": "30 min",
+          "load_kg": null,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "captura de tela; conferir dia e agrupamento",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "name": "Sexta",
+      "focus": "Escada + Perna completa + Bíceps + Abdômen",
+      "exercises": [
+        {
+          "id": "Se1",
+          "name": "Mesa Flexora",
+          "sets": 4,
+          "reps": "12",
+          "load_kg": 8,
+          "rest_seconds": 60,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Se2",
+          "name": "Cadeira Flexora",
+          "sets": 4,
+          "reps": "12",
+          "load_kg": 25,
+          "rest_seconds": 60,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Se3",
+          "name": "Afundo com Halteres",
+          "sets": 4,
+          "reps": "12",
+          "load_kg": 0,
+          "rest_seconds": 60,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Se4",
+          "name": "Agachamento guiado máquina",
+          "sets": 4,
+          "reps": "12",
+          "load_kg": 0,
+          "rest_seconds": 60,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Se5",
+          "name": "Cadeira Extensora",
+          "sets": 4,
+          "reps": "12",
+          "load_kg": 8,
+          "rest_seconds": 60,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Se6",
+          "name": "Adução de Quadril Máquina",
+          "sets": 3,
+          "reps": "12 a 15",
+          "load_kg": 20,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Se7",
+          "name": "Agachamento Sumô com Halteres",
+          "sets": 3,
+          "reps": "12 a 15",
+          "load_kg": 4,
+          "rest_seconds": 60,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Se8",
+          "name": "Rosca Inversa na Polia Baixa",
+          "sets": 4,
+          "reps": "12",
+          "load_kg": 0,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Se9",
+          "name": "Abdominal Prancha Isométrica",
+          "sets": 3,
+          "reps": "30 s",
+          "load_kg": 0,
+          "rest_seconds": 60,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Se10",
+          "name": "Banco scooth com anilina",
+          "sets": 4,
+          "reps": "12",
+          "load_kg": 0,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Se11",
+          "name": "Abdominal Supra com Corda na Polia",
+          "sets": 4,
+          "reps": "12",
+          "load_kg": 25,
+          "rest_seconds": 60,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "name": "Sábado",
+      "focus": "Peito + Ombro + Tríceps + Cardio",
+      "exercises": [
+        {
+          "id": "Sá1",
+          "name": "Supino super inclinado articulado",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 0,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Sá2",
+          "name": "Crossover Mini/polia alta",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 5,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Sá3",
+          "name": "Supino Máquina Inclinado (Pegada Pronada)",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 0,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Sá4",
+          "name": "Elevação lateral máquina/anilhas",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 2,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Sá5",
+          "name": "Crucifixo Inverso Sentado",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 2,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Sá6",
+          "name": "Tríceps Mergulho máquina",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 15,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Sá7",
+          "name": "Tríceps scooth pegada neutra",
+          "sets": 3,
+          "reps": "12",
+          "load_kg": 14,
+          "rest_seconds": 45,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        },
+        {
+          "id": "Sá8",
+          "name": "Esteira Caminhada",
+          "sets": 1,
+          "reps": "30 min",
+          "load_kg": null,
+          "rest_seconds": null,
+          "notes": "",
+          "source": "captura de tela",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "name": "Domingo",
+      "focus": "Aeróbico em jejum",
+      "exercises": []
+    }
+  ],
+  "sessions": []
+}

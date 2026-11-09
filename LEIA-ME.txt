@@ -1,0 +1,1 @@
+Personal Soraya v2 — protótipo PWA. Hospede todos os arquivos da pasta em HTTPS. Abra o endereço no Safari do iPhone e use Compartilhar > Adicionar à Tela de Início. A abertura local do index.html não garante carregamento de seed.json nem armazenamento persistente. A ficha é preliminar e deve ser revisada; fotos/vídeos do MFIT não foram copiados. Exporte backup regularmente.
