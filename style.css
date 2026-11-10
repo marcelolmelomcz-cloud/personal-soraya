@@ -4,3 +4,5 @@
 .exercise-status{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0;padding:14px;border:1px solid #385962;border-radius:14px;background:#0a2530}.exercise-status label{display:flex;align-items:center;gap:9px;margin:0;color:#e9c577;font-weight:600}.exercise-status input{width:22px;height:22px;accent-color:#0eaa9f}#startWorkout:disabled{opacity:.7;cursor:default}#workoutClock{padding:10px 0}
 
 .autosave-note{font-size:.82rem;color:#91b9b5;align-self:center;padding:8px 0}
+
+.exercise-visuals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:15px 0}.exercise-visuals figure{margin:0;padding:8px;border:1px solid #42616b;border-radius:14px;background:#0b2530;text-align:center}.exercise-illustration{width:100%;max-height:205px;display:block}.exercise-visuals figcaption{font-size:13px;color:#e3c17c;margin-top:6px}.visual-disclaimer{font-size:12px;color:#aabdc4;line-height:1.45;margin:10px 0 18px}@media(max-width:360px){.exercise-visuals{gap:7px}.exercise-visuals figure{padding:4px}}
