@@ -46,6 +46,12 @@ function exerciseDiagram(e,phase){
 }
 const EXERCISE_PHOTOS=[
 [/^abdominal máquina$/i,'Ab_Crunch_Machine'],
+[/^abdominal prancha isométrica$/i,'Plank'],
+[/^prancha dinâmica$/i,'Plank'],
+[/^tríceps na polia com corda$/i,'Triceps_Pushdown_-_Rope_Attachment'],
+[/^remada baixa supinada$/i,'Seated_Cable_Rows'],
+[/^escada máquina$/i,'Stairmaster'],
+[/^cadeira flexora$/i,'Seated_Leg_Curl'],
 [/^glúteos coice na polia pernas estendidas$/i,'Glute_Kickback'],
 [/^esteira (caminhada|sprint)$/i,'Jogging_Treadmill'],
 [/^mesa flexora$/i,'Lying_Leg_Curls'],
