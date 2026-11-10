@@ -23,5 +23,26 @@ const EXERCISE_GUIDES=[
 [/stiff/i,['Posicione os pés firmes e mantenha a carga próxima ao corpo.','Mantenha joelhos suavemente flexionados e coluna neutra.','Leve o quadril para trás e retorne contraindo glúteos, sem perder a postura.','Evite arredondar a coluna ou descer além da mobilidade disponível.']]
 ];
 function exerciseGuide(e){const match=EXERCISE_GUIDES.find(([re])=>re.test(e.name));if(match)return match[1];return ['Confira a regulagem específica do aparelho com o profissional responsável.','Mantenha postura estável e amplitude confortável, sem dor.','Execute cada repetição de modo controlado, respeitando a ficha prescrita.','Evite trancos, cargas excessivas e compensações com outras partes do corpo.'];}
-function guideMarkup(e){const g=exerciseGuide(e);return '<details class="guide"><summary>▣ Ver execução e orientações</summary><div class="guide-inner"><p class="muted">Figuras de duas posições: aguardando imagens verificadas deste exercício.</p><h4>1. Ajuste do equipamento</h4><p>'+safe(g[0])+'</p><h4>2. Posicionamento</h4><p>'+safe(g[1])+'</p><h4>3. Execução do movimento</h4><p>'+safe(g[2])+'</p><div class="good"><strong>✓ Postura e movimento a buscar</strong><p>'+safe(g[1]+' '+g[2])+'</p></div><div class="bad"><strong>✕ Erros que devem ser evitados</strong><p>'+safe(g[3])+'</p></div><button class="secondary" onclick="openGuideModal('+current+','+db.days[current].exercises.indexOf(e)+')">ⓘ Ver detalhes</button></div></details>';}
+
+/* Ilustrações vetoriais locais: sem dependência de fotos ou links externos. */
+function exerciseDiagram(e,phase){
+ const name=(e.name||'').toLowerCase(),end=phase===1;
+ const cable=/polia|puxad|remada|crossover|tríceps/.test(name);
+ const leg=/agach|leg press|extensor|flexora|panturrilha|quadril/.test(name);
+ const floor=/prancha|abdominal/.test(name);
+ const cardio=/esteira|escada|bicicleta/.test(name);
+ const push=/tríceps|supino|crucifixo|desenvolvimento|elevação/.test(name);
+ const stroke='#a9c6cf',accent='#dfbd70',body='#e9d6b4';
+ const frame=cable?'<path d="M23 18V160M23 18H136M136 18V160M31 29H128" stroke="'+stroke+'" stroke-width="5" fill="none"/><circle cx="42" cy="31" r="6" fill="'+accent+'"/>':leg?'<path d="M18 154H145M20 44V154M20 44H142M142 44V154" stroke="'+stroke+'" stroke-width="5" fill="none"/>':cardio?'<path d="M18 155H145L130 132H42Z M119 133V55H137" stroke="'+stroke+'" stroke-width="5" fill="none"/>':floor?'<path d="M10 151H150" stroke="'+stroke+'" stroke-width="5"/>':'<path d="M14 156H146" stroke="'+stroke+'" stroke-width="4"/>';
+ let human='';
+ if(floor){human='<circle cx="42" cy="109" r="11" fill="'+body+'"/><path d="M53 116L'+(end?'107 119':'106 137')+'L142 139M65 124L54 147M107 127L121 148" stroke="'+body+'" stroke-width="9" stroke-linecap="round" fill="none"/>';}
+ else if(cardio){human='<circle cx="80" cy="54" r="12" fill="'+body+'"/><path d="M80 68L81 109M81 83L61 100M82 83L104 97M81 109L'+(end?'112':'64')+' 143M81 109L'+(end?'58':'105')+' 143" stroke="'+body+'" stroke-width="9" stroke-linecap="round" fill="none"/>';}
+ else {const handY=push?(end?73:108):(end?92:53);human='<circle cx="82" cy="47" r="12" fill="'+body+'"/><path d="M82 62L82 109M82 109L65 149M82 109L103 149M80 73L'+(end?'56':'64')+' '+handY+'M84 73L'+(end?'112':'104')+' '+handY+'" stroke="'+body+'" stroke-width="9" stroke-linecap="round" fill="none"/>';if(cable)human+='<path d="M42 '+handY+'H125" stroke="'+accent+'" stroke-width="5" stroke-linecap="round"/>';}
+ return '<svg class="exercise-illustration" viewBox="0 0 160 170" role="img" aria-label="'+(end?'Posição final':'Posição inicial')+' — ilustração esquemática"><rect width="160" height="170" rx="12" fill="#0b2530"/>'+frame+human+'</svg>';
+}
+function exerciseVisuals(e){
+ return '<div class="exercise-visuals"><figure>'+exerciseDiagram(e,0)+'<figcaption>Posição inicial</figcaption></figure><figure>'+exerciseDiagram(e,1)+'<figcaption>Posição final</figcaption></figure></div><p class="visual-disclaimer">Esquemas ilustrativos, não fotografias da máquina. Confira regulagem e movimento com o profissional da academia.</p>';
+}
+
+function guideMarkup(e){const g=exerciseGuide(e);return '<details class="guide"><summary>▣ Ver execução e orientações</summary><div class="guide-inner">'+exerciseVisuals(e)+'<h4>1. Ajuste do equipamento</h4><p>'+safe(g[0])+'</p><h4>2. Posicionamento</h4><p>'+safe(g[1])+'</p><h4>3. Execução do movimento</h4><p>'+safe(g[2])+'</p><div class="good"><strong>✓ Postura e movimento a buscar</strong><p>'+safe(g[1]+' '+g[2])+'</p></div><div class="bad"><strong>✕ Erros que devem ser evitados</strong><p>'+safe(g[3])+'</p></div><button class="secondary" onclick="openGuideModal('+current+','+db.days[current].exercises.indexOf(e)+')">ⓘ Ver detalhes</button></div></details>';}
 function openGuideModal(day,j){const e=db.days[day]?.exercises[j];if(!e)return;const g=exerciseGuide(e);const m=document.getElementById('guideModal');m.querySelector('.modal-content').innerHTML='<h2>'+safe(e.name)+'</h2><p class="muted">Séries previstas: '+safe(e.sets)+' · Meta: '+safe(e.reps)+'</p>'+g.map((v,i)=>'<h3>'+(i+1)+'. '+['Ajuste do equipamento','Posicionamento','Execução do movimento','Cuidados e erros a evitar'][i]+'</h3><p>'+safe(v)+'</p>').join('')+'<p class="muted">Orientações gerais. Valide com o profissional que acompanha a ficha.</p>';m.showModal();}
