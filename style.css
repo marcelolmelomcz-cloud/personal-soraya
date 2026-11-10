@@ -10,3 +10,5 @@
 .guide-modal .modal-content .exercise-visuals{margin:18px 0}.guide-modal .modal-content .good,.guide-modal .modal-content .bad{margin:16px 0}.guide-modal .modal-content h3{color:#e3c17c;margin-top:20px}.guide-modal .modal-content{padding-bottom:28px}
 
 .exercise-visuals img{width:100%;height:190px;object-fit:contain;background:#f6f7f8;border-radius:9px;display:block}.exercise-visuals figure{min-width:0}.exercise-visuals{align-items:stretch}.visual-disclaimer{font-size:12px}
+
+.weekly-record{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #35515a}.weekly-record div{display:flex;flex-direction:column;gap:4px}.weekly-record small{color:#a8bdc5}.delete-workout{color:#ffd2c6;border-color:#a76c60;white-space:nowrap}
