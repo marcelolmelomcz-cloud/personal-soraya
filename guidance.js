@@ -44,8 +44,29 @@ function exerciseDiagram(e,phase){
  const label=lat?'PUXADA ARTICULADA':row?'REMADA':tri?'TRÍCEPS':abs?'ABDOMINAL':plank?'PRANCHA':tread?'ESTEIRA':'MOVIMENTO';
  return '<svg class="exercise-illustration" viewBox="0 0 160 170" role="img" aria-label="'+(end?'Posição final':'Posição inicial')+' — '+label+'"><rect width="160" height="170" rx="12" fill="#0b2530"/>'+floor+machine+human+'</svg>';
 }
+const EXERCISE_PHOTOS=[
+[/^abdominal máquina$/i,'Ab_Crunch_Machine'],
+[/^esteira (caminhada|sprint)$/i,'Jogging_Treadmill'],
+[/^mesa flexora$/i,'Lying_Leg_Curls'],
+[/^cadeira extensora$/i,'Leg_Extensions'],
+[/^crossover mini\/polia alta$/i,'Cable_Crossover'],
+[/^tríceps mergulho máquina$/i,'Dip_Machine'],
+[/^abdominal supra com corda na polia$/i,'Cable_Crunch'],
+[/^crucifixo inverso sentado$/i,'Cable_Rear_Delt_Fly'],
+[/^desenvolvimento em pé com halteres$/i,'Dumbbell_Shoulder_Press'],
+[/^elevação de quadril na máquina$/i,'Barbell_Hip_Thrust'],
+[/^puxador articulado pegada supinada$/i,'Close-Grip_Front_Lat_Pulldown'],
+[/^tríceps scooth pegada neutra$/i,'Machine_Triceps_Extension'],
+[/^puxada articulada de ação conjunta$/i,'Leverage_High_Row'],
+[/^remada máquina pegada neutra$/i,'Leverage_Iso_Row'],
+[/^supino máquina inclinado \(pegada pronada\)$/i,'Incline_Dumbbell_Press']
+];
 function exerciseVisuals(e){
- return '<div class="exercise-visuals"><figure>'+exerciseDiagram(e,0)+'<figcaption>Posição inicial</figcaption></figure><figure>'+exerciseDiagram(e,1)+'<figcaption>Posição final</figcaption></figure></div><p class="visual-disclaimer">Desenho técnico simplificado. Para regulagem, pegada e amplitude, siga o aparelho específico e a orientação profissional.</p>';
+ const item=EXERCISE_PHOTOS.find(([rx])=>rx.test(e.name||''));
+ if(!item)return '<p class="visual-disclaimer">Ainda não há fotografias verificadas para este equipamento específico. Consulte as orientações abaixo e confirme a execução com o profissional.</p>';
+ const id=item[1],base='https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/'+id+'/';
+ const cards=[0,1].map((v)=>'<figure><img loading="lazy" decoding="async" src="'+base+v+'.jpg" alt="Demonstração '+(v+1)+' de '+safe(e.name)+'" onerror="this.closest(\'figure\').style.display=\'none\'"><figcaption>Posição '+(v+1)+'</figcaption></figure>').join('');
+ return '<div class="exercise-visuals">'+cards+'</div><p class="visual-disclaimer">Fotografias ilustrativas de equipamento ou movimento semelhante. Confira as diferenças de máquina, pegada e amplitude com o profissional da academia. Fonte: Free Exercise DB (domínio público).</p>';
 }
 function guideMarkup(e){const g=exerciseGuide(e);return '<details class="guide"><summary>▣ Ver execução e orientações</summary><div class="guide-inner">'+exerciseVisuals(e)+'<h4>1. Ajuste do equipamento</h4><p>'+safe(g[0])+'</p><h4>2. Posicionamento</h4><p>'+safe(g[1])+'</p><h4>3. Execução do movimento</h4><p>'+safe(g[2])+'</p><div class="good"><strong>✓ Postura e movimento a buscar</strong><p>'+safe(g[1]+' '+g[2])+'</p></div><div class="bad"><strong>✕ Erros que devem ser evitados</strong><p>'+safe(g[3])+'</p></div><button class="secondary" onclick="openGuideModal('+current+','+db.days[current].exercises.indexOf(e)+')">ⓘ Ver detalhes</button></div></details>';}
 function openGuideModal(day,j){const e=db.days[day]?.exercises[j];if(!e)return;const g=exerciseGuide(e);const m=document.getElementById('guideModal');m.querySelector('.modal-content').innerHTML='<h2>'+safe(e.name)+'</h2><p class="muted">Séries previstas: '+safe(e.sets)+' · Meta: '+safe(e.reps)+'</p>'+exerciseVisuals(e)+g.map((v,i)=>'<h3>'+(i+1)+'. '+['Ajuste do equipamento','Posicionamento','Execução do movimento','Cuidados e erros a evitar'][i]+'</h3><p>'+safe(v)+'</p>').join('')+'<div class="good"><strong>✓ Postura correta</strong><p>'+safe(g[1]+' '+g[2])+'</p></div><div class="bad"><strong>✕ Evite estes erros</strong><p>'+safe(g[3])+'</p></div><p class="muted">Demonstração esquemática; confirme a técnica com profissional habilitado.</p>';m.showModal();}
